@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using DevFest.Views;
 
 namespace DevFest
 {
@@ -29,6 +30,8 @@ namespace DevFest
 
 			return true;
 		}
+
+		#region  Override Methods
 
 		public override void OnResignActivation (UIApplication application)
 		{
@@ -60,6 +63,8 @@ namespace DevFest
 		{
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
 		}
+
+		#endregion
 	}
 }
 

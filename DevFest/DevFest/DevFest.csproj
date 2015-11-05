@@ -72,6 +72,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="Views\LoginViewController.xib" />
+    <InterfaceDefinition Include="Views\WelcomeController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -84,9 +85,17 @@
     <Compile Include="Views\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dtos\User.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Views\WelcomeController.cs" />
+    <Compile Include="Views\WelcomeController.designer.cs">
+      <DependentUpon>WelcomeController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>

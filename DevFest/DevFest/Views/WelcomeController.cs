@@ -23,7 +23,7 @@ namespace DevFest
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+			this.Title = "landing";
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 	}

@@ -21,12 +21,16 @@ namespace DevFest
 			// create a new window instance based on the screen size
 			Window = new UIWindow (UIScreen.MainScreen.Bounds);
 			LoginViewController loginController = new LoginViewController ();
-
+			UINavigationController navigationController = new UINavigationController (loginController);
 			// If you have defined a root view controller, set it here:
-			Window.RootViewController = loginController;
+			Window.RootViewController = navigationController;
 
 			// make the window visible
 			Window.MakeKeyAndVisible ();
+
+			#if DEBUG
+			Xamarin.Calabash.Start ();
+			#endif
 
 			return true;
 		}

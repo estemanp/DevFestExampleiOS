@@ -24,11 +24,11 @@ namespace DevFest.Controllers
 			userList = new List<User> ();
 			User user = new User ();
 			user.UserName = "Juan";
-			user.Password = "12345";
+			user.Password = "123456";
 			userList.Add (user);
 			user = new User ();
-			user.UserName = "Perez";
-			user.Password = "54321";
+			user.UserName = "Angela";
+			user.Password = "105383";
 			userList.Add (user);
 		}
 

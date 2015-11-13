@@ -30,6 +30,7 @@ namespace DevFest.Views
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			this.Title = "Login";
 			btnLogin.TouchDown += Login;
 		}
 
@@ -44,11 +45,12 @@ namespace DevFest.Views
 				user.UserName = txtLogin.Text;
 				user.Password = txtPassword.Text;
 				if (controller.ExistUser (user)) {
-
+					WelcomeController w = new WelcomeController ();
+					this.NavigationController.PushViewController (w, true);
 				} else {
 					//No existe el usario con dicha contraseña en la db
 					UIAlertView alert = new UIAlertView () { 
-						Title = "Error", Message = "Error en el usuario o clave"
+						Title = "Error", Message = "Error en el usuario o la clave"
 					};
 					alert.AddButton ("OK");
 					alert.Show ();
@@ -56,7 +58,7 @@ namespace DevFest.Views
 			} else {
 				//No ha ingresado todos los campos
 				UIAlertView alert = new UIAlertView () { 
-					Title = "Error", Message = "Debe ingresar todos los campos"
+					Title = "Error", Message = "Por favor ingrese sus datos"
 				};
 				alert.AddButton ("OK");
 				alert.Show ();
